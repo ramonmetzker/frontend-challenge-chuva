@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin-left: 220px;
+  font-family: "Roboto", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+}
+
+.sidebar #event-name {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffb354), to(#ee7a3a));
+  background: linear-gradient(180deg, #ffb354 0%, #ee7a3a 100%);
+  height: 68px;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  line-height: 68px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.sidebar #event-menu {
+  width: 100%;
+}
+
+.sidebar #event-menu ul.menu {
+  width: 100%;
+  list-style: none;
+}
+
+.sidebar #event-menu ul.menu li a {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  padding-left: 24px;
+  border-bottom: 1px solid #e7e7e7;
+  text-decoration: none;
+  color: #725c5c;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+.sidebar #event-menu ul.menu li a.active {
+  background: #fdf1eb;
+}
+
+.sidebar #event-menu ul.menu li a.active::before {
+  display: block;
+}
+
+.sidebar #event-menu ul.menu li a::before {
+  display: none;
+  content: "";
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffb354), to(#ee7a3a));
+  background: linear-gradient(180deg, #ffb354 0%, #ee7a3a);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.sidebar #event-menu ul.menu li a:hover {
+  background: #fdf1eb;
+}
+
+.sidebar #event-menu ul.menu li a:hover:before {
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+header {
+  height: 68px;
+  width: 100%;
+  background: #fdf1eb;
+  color: #725c5c;
+}
+
+header .container {
+  height: 100%;
+}
+
+header .header-wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .header-wrapper .event-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .header-wrapper .event-info .event-type {
+  font-size: 14px;
+}
+
+header .header-wrapper .event-info .event-title {
+  font-size: 22px;
+}
+
+header .header-wrapper .lang {
+  position: relative;
+}
+
+header .header-wrapper .lang label {
+  position: absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-wrapper .lang select {
+  display: block;
+  font-size: 14px;
+  padding: 8px 24px 8px 32px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background: transparent;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='rgb(51,51,51)' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+}
+
+header .header-wrapper .lang select:hover {
+  background-color: #ffb354;
+}
+
+header .header-wrapper .user-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-wrapper .login-info {
+  margin-left: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+header .header-wrapper .login-info .login-user {
+  text-align: right;
+  margin-right: 1em;
+}
+
+header .header-wrapper .login-info .login-user .login-message {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+header .header-wrapper .login-info .login-user .login-email {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+header .header-wrapper .login-info .login-pic {
+  height: 30px;
+  width: 30px;
+  background-image: url(../img/user.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  position: relative;
+}
+
+header .header-wrapper .login-info .login-pic .login-notifications {
+  background: #f85959;
+  width: 12px;
+  height: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  right: -2px;
+  top: -2px;
+}
+
+.paper .paper-header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  padding: 20px 5px;
+  gap: 30px;
+}
+
+.paper .paper-overview .paper-title {
+  font-size: 20px;
+  font-weight: 900;
+  color: #ed7839;
+  line-height: 25px;
+  letter-spacing: 5%;
+}
+
+.paper .paper-menu .paper-actions {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.paper .paper-menu .paper-actions a {
+  display: block;
+  margin-left: 5px;
+  font-family: "Roboto", sans-serif;
+  padding: 6px 12px;
+  background: #ed7839;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.paper .paper-menu .paper-actions a:hover {
+  background: #c55c24;
+}
+
+footer {
+  height: 180px;
+  border: 1px solid black;
+}
+
+.container {
+  max-width: 1056px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=styles.css.map */
